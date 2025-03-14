@@ -1,24 +1,25 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 const TestPage = () => {
   const router = useRouter();
 
   const handlePushWithScroll = () => {
-    router.push('/'); // 預設行為，會自動滾動到頂部
+    router.push('/');
   };
 
   const handlePushWithoutScroll = () => {
-    router.push('/', { scroll: false }); // 不會滾動到頂部
+    router.push('/', { scroll: false });
   };
 
   const handleReplaceWithScroll = () => {
-    router.replace('/'); // 預設行為，會自動滾動到頂部
+    router.replace('/');
   };
 
   const handleReplaceWithoutScroll = () => {
-    router.replace('/', { scroll: false }); // 不會滾動到頂部
+    router.replace('/', { scroll: false });
   };
 
   return (
@@ -45,6 +46,12 @@ const TestPage = () => {
         <button onClick={handleReplaceWithoutScroll}>
           Replace to Page 1 without scroll (保持滾動位置)
         </button>
+      </div>
+
+      {/* 使用 Link 進行導航 */}
+      <div>
+        <Link href="/" scroll={false}
+        >Go to Page 1 (Link)</Link>
       </div>
     </div>
   );
