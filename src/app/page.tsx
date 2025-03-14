@@ -55,7 +55,7 @@ const Page = () => {
       </div>
 
       <div>
-        <Link href="/test" scroll={true}
+        <Link href="/test"
         >Go to Page 2 (Link)</Link>
       </div>
       {/* <Link

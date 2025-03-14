@@ -50,7 +50,7 @@ const TestPage = () => {
 
       {/* 使用 Link 進行導航 */}
       <div>
-        <Link href="/" scroll={false}
+        <Link href="/"
         >Go to Page 1 (Link)</Link>
       </div>
     </div>
