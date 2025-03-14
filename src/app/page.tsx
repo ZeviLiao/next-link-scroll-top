@@ -23,9 +23,9 @@ const Page = () => {
   };
 
   const handleClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    // window.scrollTo(0, 0);
-    router.push('/test', { scroll: true });
+    // e.preventDefault();
+    window.scrollTo(0, 0);
+    // router.push('/test', { scroll: true });
   };
 
   return (
@@ -55,11 +55,11 @@ const Page = () => {
       </div>
 
       <div>
-        <Link href="/test"
+        <Link href="/test" scroll={true}
         >Go to Page 2 (Link)</Link>
       </div>
       {/* <Link
-        onClick={handleClick} href={'#'}>
+        onClick={handleClick} href={'/test'}>
         Go to Page 2 (Link)
       </Link> */}
     </div>
